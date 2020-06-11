@@ -1,12 +1,12 @@
 [submodule "spram"]
 	path = spram
-	url = https://github.com/QueenField/MPSoC-SPRAM.git
+	url = https://github.com/QueenField/MPSoC-WB-SPRAM.git
 [submodule "dbg"]
 	path = dbg
-	url = https://github.com/QueenField/MPSoC-DBG.git
+	url = https://github.com/QueenField/MPSoC-WB-DBG.git
 [submodule "uart"]
 	path = uart
-	url = https://github.com/QueenField/MPSoC-UART.git
+	url = https://github.com/QueenField/MPSoC-WB-UART.git
 [submodule "msi"]
 	path = msi
-	url = https://github.com/QueenField/MPSoC-MSI.git
+	url = https://github.com/QueenField/MPSoC-WB-MSI.git
