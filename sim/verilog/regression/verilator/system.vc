@@ -1,17 +1,21 @@
-+incdir+../../../../bench/verilog
-+incdir+../../../../dbg/bench/verilog/pu/or1k/wb/debug/jtag_vpi
+--Mdir .
+--cc
+-LDFLAGS -lelf
++incdir+../../../../software/elf-loader
+-CFLAGS -I../../../../software/elf-loader
++incdir+../../../../bench/cpp
+-CFLAGS -I../../../../bench/cpp
 +incdir+../../../../dbg/rtl/verilog/pu/or1k/wb/pkg
+-CFLAGS -I../../../../dbg/rtl/verilog/pu/or1k/wb/pkg
 +incdir+../../../../msi/rtl/verilog/wb/core
+-CFLAGS -I../../../../msi/rtl/verilog/wb/core
 +incdir+../../../../msi/rtl/verilog/wb/pkg
+-CFLAGS -I../../../../msi/rtl/verilog/wb/pkg
 +incdir+../../../../rtl/verilog/pkg
+-CFLAGS -I../../../../rtl/verilog/pkg
 +incdir+../../../../uart/rtl/verilog/wb/pkg
-../../../../bench/verilog/or1k_monitor.sv
-../../../../bench/verilog/or1k_testbench.sv
-../../../../bench/verilog/vlog_functions.sv
-../../../../bench/verilog/vlog_tap_generator.sv
-../../../../bench/verilog/vlog_tb_utils.sv
+-CFLAGS -I../../../../uart/rtl/verilog/wb/pkg
 ../../../../dbg/bench/verilog/pu/or1k/wb/debug/jtag_tap/tap_top.sv
-../../../../dbg/bench/verilog/pu/or1k/wb/debug/jtag_vpi/jtag_vpi.sv
 ../../../../dbg/rtl/verilog/pu/or1k/wb/pkg/adbg_or1k_defines.sv
 ../../../../dbg/rtl/verilog/pu/or1k/wb/core/adbg_bytefifo.sv
 ../../../../dbg/rtl/verilog/pu/or1k/wb/core/adbg_crc32.sv
@@ -26,10 +30,6 @@
 ../../../../dbg/rtl/verilog/pu/or1k/wb/core/adbg_wb_biu.sv
 ../../../../dbg/rtl/verilog/pu/or1k/wb/core/adbg_wb_module.sv
 ../../../../msi/rtl/verilog/wb/arbiter/mpsoc_msi_arbiter.sv
-../../../../msi/bench/verilog/bfm/wb/mpsoc_msi_wb_bfm_master.sv
-../../../../msi/bench/verilog/bfm/wb/mpsoc_msi_wb_bfm_memory.sv
-../../../../msi/bench/verilog/bfm/wb/mpsoc_msi_wb_bfm_slave.sv
-../../../../msi/bench/verilog/bfm/wb/mpsoc_msi_wb_bfm_transactor.sv
 ../../../../msi/rtl/verilog/wb/cdc/mpsoc_msi_wb_cc561.sv
 ../../../../msi/rtl/verilog/wb/cdc/mpsoc_msi_wb_cdc.sv
 ../../../../msi/rtl/verilog/wb/cdc/mpsoc_msi_wb_sync2_pgen.sv
@@ -85,3 +85,9 @@
 ../../../../uart/rtl/verilog/wb/core/mpsoc_wb_uart_tfifo.sv
 ../../../../uart/rtl/verilog/wb/core/mpsoc_wb_uart_transmitter.sv
 ../../../../uart/rtl/verilog/wb/core/mpsoc_wb_uart.sv
+--top-module or1k_pu
+--exe
+../../../../software/elf-loader/elf-loader.c
+../../../../bench/cpp/verilator_tb_utils.cpp
+../../../../bench/cpp/jtagServer.cpp
+../../../../bench/cpp/or1k_testbench.cpp
